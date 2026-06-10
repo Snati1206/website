@@ -1,0 +1,2 @@
+
+// Filter navigation bar behavior

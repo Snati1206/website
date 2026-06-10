@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* bright-snow: hsla(210, 17%, 98%, 1);
+alabaster-grey: hsla(210, 14%, 89%, 1);
+iron-grey: hsla(210, 9%, 31%, 1);
+carbon-black: hsla(210, 11%, 15%, 1); */
+
+body {
+    font-family: "JetBrains Mono", "Arial", sans-serif;
+    margin: 0;
+    background-color: hsla(210, 17%, 98%, 1);
+    margin-top: 10px;
+}
+
+button {
+    font-family: "JetBrains Mono", "Arial", sans-serif;
+    background-color: hsla(210, 17%, 98%, 1) ;
+    color: hsla(210, 11%, 15%, 1) ;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+h1, h2, h3, p {
+    font-family: "JetBrains Mono", "Arial", sans-serif;
+    margin : 0;
+    padding : 5px;
+}
+
+ul, li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 0;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: hsla(210, 11%, 15%, 1) ;
+}
+
+.logo h1, .logo h2 {
+    font-family: "Pixelify Sans", "JetBrains Mono", "Arial", sans-serif;
+}
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    align-items: center;
+    padding: 20px;
+}
+
+.aboutText{
+    font-family: "JetBrains Mono", "Arial", sans-serif;
+    color: hsla(210, 11%, 15%, 1) ;
+    padding: 10px;
+    text-align: justify;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.aboutText p {
+    margin-bottom: 0 auto;
+}
+
+.navbar {
+    font-family: "JetBrains Mono", "Arial", sans-serif;
+    font-weight: bold;
+}
+
+.navdiv {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: hsla(210, 17%, 98%, 1);
+    position: fixed;
+    top: 0;
+    width: 100%;    
+    margin: 0 auto;
+
+}
+
+.navdiv2 li a {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.navdiv2 li a:hover {
+    transform: scale(1.10);
+    color: rgb(0, 0, 0);
+}
+
+.logo {
+    display: flex;
+    margin-top : 0;
+    align-items: baseline;
+    color: hsla(210, 11%, 15%, 1) ;
+}
+
+.embedMedia {
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 70%;
+}
+
+footer {
+    background-color: hsla(210, 17%, 98%, 1);
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footerIcons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 10px;
+}
+
+.footerIcons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+}
+
+.footerIcons a:hover img {
+    transform: scale(1.15);
+}
+
+canvas {
+    background-color : hsla(210, 17%, 98%, 1);
+}
+
+.gridContainer {
+    grid-template-columns: repeat(4,1fr);
+    margin: 0 auto;
+    margin-top: 15px;
+    display: grid;
+}
+
+.gridContainer > div {
+    margin: 0;
+    background-color:  hsla(210, 14%, 89%, 1);
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.gridContainer > div > img{
+    width: 100%;
+}
+
+.gridContainer > div > iframe{
+    width: 100%;
+}
+
+.projectGrid div:hover{
+    transform: scale(1.20);
+}
+
+.portfolioMain {
+    display:inline-block;
+}
+
+.navFilter {
+    display: flex;
+    text-align: left;
+    margin-top: 150px;
+    background-color: rgba(249, 250, 251, 0.957);
+    padding: 0;
+    transition: transform 0.5 ease;
+    transition: color 0.3 ease;
+}
+
+.navFilter > label input:hover {
+    transform: scale(1.05);
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+
