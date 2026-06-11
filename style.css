@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: "JetBrains Mono";
     src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
@@ -86,6 +88,7 @@ a {
     padding: 10px;
     text-align: justify;
     margin-top: 10px;
+    margin-bottom:10%;
     width: 50%;
 }
 
@@ -103,7 +106,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    background-color: hsla(210, 17%, 98%, 1);
+    background-color: rgba(249, 250, 251, 0.836);
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     width: 100%;    
@@ -137,7 +141,8 @@ a {
 }
 
 footer {
-    background-color: hsla(210, 17%, 98%, 1);
+    background-color: rgba(249, 250, 251, 0.783);
+    backdrop-filter: blur(10px);
     padding: 5px;
     position: fixed;
     bottom: 0;
@@ -153,13 +158,13 @@ footer {
 }
 
 .footerIcons img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     transition: transform 0.2s ease;
 }
 
 .footerIcons a:hover img {
-    transform: scale(1.15);
+    transform: scale(1.40);
 }
 
 canvas {
@@ -167,15 +172,37 @@ canvas {
 }
 
 .gridContainer {
-    grid-template-columns: repeat(4,1fr);
     margin: 0 auto;
-    margin-top: 15px;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width:644px;
+    margin-bottom:10%;
+}
+
+.gridContainer div:nth-child(1) {
+  grid-column: span 2;
+}
+.gridContainer div:nth-child(2) {
+  grid-column: span 2;
+}
+.gridContainer div:nth-child(3) {
+  grid-column: span 4;
+}
+.gridContainer div:nth-child(5) {
+  grid-column: span 2;
+}
+.gridContainer div:nth-child(6) {
+  grid-row: span 3;
+}
+.gridContainer div:nth-child(7) {
+  grid-column: span 4;
 }
 
 .gridContainer > div {
     margin: 0;
-    background-color:  hsla(210, 14%, 89%, 1);
+    max-width: 622px;
+
+    background-color:hsla(210, 17%, 98%, 1);
     padding: 0;
     transition: transform 0.2s ease;
 }
@@ -200,6 +227,7 @@ canvas {
     display: flex;
     text-align: left;
     margin-top: 150px;
+    margin-bottom: 10px;
     background-color: rgba(249, 250, 251, 0.957);
     padding: 0;
     transition: transform 0.5 ease;
