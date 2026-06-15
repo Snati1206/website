@@ -26,5 +26,8 @@ img.onerror = () => {
     ctx.fillText("Image not found", canvas.width / 2, canvas.height / 2);
 };
 
+function draw(){
+
+}
 
 

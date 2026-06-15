@@ -1,0 +1,22 @@
+{
+    "img01": {
+        "size":"large",
+        "name":"macula",
+        "format":"jpeg"
+    },
+    "img02": {
+        "size":"medium",
+        "name":"soundwalls",
+        "format": "png"
+    },
+    "img03": {
+        "size":"small",
+        "name":"gameAudio",
+        "format": "png"
+    },
+    "img04": {
+        "size":"large",
+        "name":"yellowFiction",
+        "format": "jpeg"
+    }
+}
