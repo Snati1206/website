@@ -171,34 +171,45 @@ canvas {
     background-color : hsla(210, 17%, 98%, 1);
 }
 
-.gridContainer {
+#portfolioContainer {
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr);
     max-width:644px;
-    margin-bottom:10%;
+    margin-bottom:10%; */
 }
 
-.gridContainer div:nth-child(1) {
-  grid-column: span 2;
-}
-.gridContainer div:nth-child(2) {
-  grid-column: span 2;
-}
-.gridContainer div:nth-child(3) {
-  grid-column: span 4;
-}
-.gridContainer div:nth-child(5) {
-  grid-column: span 2;
-}
-.gridContainer div:nth-child(6) {
-  grid-row: span 3;
-}
-.gridContainer div:nth-child(7) {
-  grid-column: span 4;
+#portfolioContainer div{
+    translate :100%;
+    opacity: 0;
+    transition: 800ms ease;
 }
 
-.gridContainer > div {
+#portfolioContainer div.show{
+    translate: 0;
+    opacity: 1;
+}
+
+/* #portfolioContainer div:nth-child(1) {
+  grid-column: span 2;
+}
+#portfolioContainer div:nth-child(2) {
+  grid-column: span 2;
+}
+#portfolioContainer div:nth-child(3) {
+  grid-column: span 2;
+}
+#portfolioContainer div:nth-child(5) {
+  grid-column: span 2;
+}
+#portfolioContainer div:nth-child(6) {
+  grid-row: span 2;
+}
+#portfolioContainer div:nth-child(7) {
+  grid-column: span 3;
+}
+
+#portfolioContainer > div {
     margin: 0;
     max-width: 622px;
 
@@ -207,17 +218,17 @@ canvas {
     transition: transform 0.2s ease;
 }
 
-.gridContainer > div > img{
+#portfolioContainer > div > img{
     width: 100%;
 }
 
-.gridContainer > div > iframe{
+#portfolioContainer > div > iframe{
     width: 100%;
 }
 
 .projectGrid div:hover{
     transform: scale(1.20);
-}
+} */
 
 .portfolioMain {
     display:inline-block;
