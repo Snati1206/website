@@ -1,6 +1,6 @@
 
 
-
+//Intersection observer for grid
 document.addEventListener("DOMContentLoaded",()=>{
     const container = document.getElementById("portfolioContainer");
     if (!container) return;
@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     const observerOptions = {
         root: null,
-        rootMargin: "-10px -10px -10px -10px",
-        threshold: 0
+        rootMargin: "0px 0px -10px 0px",
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -27,5 +27,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     items.forEach(item => observer.observe(item));
 });
+
+//Navigation Filter Portfolio
 
 
