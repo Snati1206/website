@@ -55,6 +55,7 @@ hr {
     border: 1px dashed var(--subtitle-color);
 }
 
+
 button {
     font-family: "JetBrains Mono", "Arial", sans-serif;
     background-color: var(--background-color) ;
@@ -78,19 +79,16 @@ input:checked + label {
 }
 
 img {
-    display: block;
     width: 100%;
     height: auto;
 }
 
 h1, h2, h3 {
     font-family: "JetBrains Mono", "Arial", sans-serif;
-    margin : 0;
 }
 
 p {
     font-family: "JetBrains Mono", "Arial", sans-serif;
-    margin : 0;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
@@ -115,18 +113,19 @@ a {
 .aboutContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
     align-items: center;
+    justify-content: center;
     padding: 20px;
+    width: min(50%, 800px);
+    margin: 100px auto 10%;
+    box-sizing: border-box;
 }
 
 .aboutText{
     font-family: "JetBrains Mono", "Arial", sans-serif;
     color: var(--text-color) ;
     text-align: justify;
-    margin-top: 10px;
-    margin-bottom:10%;
-    width: 50%;
+    width: 100%;
 }
 
 .aboutText p {
@@ -147,10 +146,12 @@ a {
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
-    width: 100%;    
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
     margin: 0 auto;
     z-index: 99;
-
+    box-sizing: border-box;
 }
 
 .navdiv2 li a {
@@ -171,12 +172,30 @@ a {
 }
 
 .embedMedia {
-
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     margin-top: 20px;
-    width: 70%;
+    margin-bottom: 20px;
 }
+
+.embedMedia iframe {
+    width: 100%;
+    max-width: 100%;
+    border: 0;
+}
+
+.indexContainer{
+    width: min(80%, 1100px);
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
+
+.indexSubtitles {
+    text-align: center;
+    margin: 0 auto 12px auto;
+}
+
 
 footer {
     background-color: rgba(249, 250, 251, 0.783);
@@ -225,24 +244,6 @@ canvas {
     opacity: 1;
 }
 
-#portfolioContainer div:nth-child(1) {
-  grid-column: span 1;
-}
-#portfolioContainer div:nth-child(2) {
-  grid-column: span 1;
-}
-#portfolioContainer div:nth-child(3) {
-  grid-column: span 1;
-}
-#portfolioContainer div:nth-child(5) {
-  grid-column: span 1;
-}
-#portfolioContainer div:nth-child(6) {
-  grid-row: span 2;
-}
-#portfolioContainer div:nth-child(7) {
-  grid-column: span 1;
-}
 
 #portfolioContainer > div {
     margin: 0;
@@ -252,6 +253,8 @@ canvas {
 
 #portfolioContainer > div > img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #portfolioContainer > div > iframe{
@@ -266,12 +269,46 @@ canvas {
     display:inline-block;
 }
 
+.item {
+    position: relative;
+    overflow: hidden;
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spawnText {
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    padding: 10px 14px;
+    margin: 0 auto;
+    color: var(--text-color);
+    background: var(--background-color);
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+    z-index: 2;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.item:hover .spawnText {
+    opacity: 1;
+}
+
+
 .navFilter {
     display: flex;
     text-align: left;
     margin-top: 150px;
     margin-bottom: 10px;
-    background-color: rgba(249, 250, 251, 0.957);
+    background-color: var(--background-color);
     padding: 0;
     transition: transform 0.5 ease;
     transition: color 0.3 ease;
@@ -283,5 +320,19 @@ canvas {
     color: rgb(0, 0, 0);
 }
 
+@media (max-width: 480px) {
 
+}
+
+@media (min-width: 481px) {
+
+}
+
+@media (min-width: 601px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
 
