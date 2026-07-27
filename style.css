@@ -93,10 +93,23 @@ p {
     margin-bottom: 1.5em;
 }
 
-.navdiv2, .navdiv2 li {
+.navdiv2 {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(0.25rem, 1.2vw, 0.8rem);
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    max-width: 100%;
+}
+
+.navdiv2 li {
     list-style-type: none;
     display: inline-block;
-    padding: 10px;
+    padding: 0;
     margin: 0;
     text-align: left;
 }
@@ -138,24 +151,25 @@ a {
 }
 
 .navdiv {
-    padding: 0;
+    padding: 0 12px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    flex-wrap: wrap;
     background-color: rgba(249, 250, 251, 0.836);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     z-index: 99;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .navdiv2 li a {
     display: inline-block;
+    padding: 0.2rem 0.4rem;
     transition: transform 0.2s ease;
 }
 
@@ -168,6 +182,7 @@ a {
     display: flex;
     margin-top : 0;
     align-items: baseline;
+    gap: 1.5rem;
     color: var(--text-color) ;
 }
 
@@ -321,18 +336,177 @@ canvas {
 }
 
 @media (max-width: 480px) {
+    body {
+        margin-top: 8px;
+    }
 
+    .navdiv {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 12px 8px;
+        gap: 6px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+
+    .logo h2 {
+        display: none;
+    }
+
+    .navdiv2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.25rem 0.5rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .navdiv2 li a {
+        padding: 0.15rem 0.3rem;
+    }
+
+    .navdiv2 li {
+        display: inline-block;
+        padding: 0;
+    }
+
+    .aboutContainer,
+    .indexContainer {
+        width: min(92%, 100%);
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    #portfolioContainer {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        position: static;
+        padding: 10px 8px;
+    }
+
+    .footerIcons {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
 }
 
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 768px) {
+    .aboutContainer {
+        width: min(80%, 700px);
+    }
 
+    .indexContainer {
+        width: min(90%, 1000px);
+    }
+
+    #portfolioContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navdiv {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px 8px;
+        gap: 6px;
+    }
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2px;
+    }
+
+    .logo h2 {
+        display: none;
+    }
+
+    .navdiv2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.3rem 0.6rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 0.98rem;
+    }
+
+    .navdiv2 li a {
+        padding: 0.15rem 0.35rem;
+    }
+
+    .navdiv2 li {
+        display: inline-block;
+        padding: 0;
+    }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+    .aboutContainer {
+        width: min(70%, 800px);
+    }
 
+    .indexContainer {
+        width: min(85%, 1100px);
+    }
+
+    #portfolioContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .logo h2 {
+    display: none;
+    }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 1025px) and (max-width: 1140px) {
+    .aboutContainer {
+        width: min(60%, 900px);
+    }
 
+    .indexContainer {
+        width: min(80%, 1200px);
+    }
+
+    #portfolioContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .logo h2 {
+    display: none;
+    }
+}
+
+@media (min-width: 1041px) {
+    .aboutContainer {
+        width: min(60%, 900px);
+    }
+
+    .indexContainer {
+        width: min(80%, 1200px);
+    }
+
+    #portfolioContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
 }
 
